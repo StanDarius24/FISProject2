@@ -2,6 +2,7 @@ package loose.oose.fis;
 
 import loose.oose.fis.documents.Branch_2;
 import loose.oose.fis.documents.Document;
+import loose.oose.fis.documents.RunLengthEncoding;
 import loose.oose.fis.documents.XML;
 import loose.oose.fis.processors.Procesor;
 import loose.oose.fis.processors.ProcesorCautare;
@@ -14,6 +15,7 @@ public class Main {
     public static void main(String[] args) {
         Branch_2 br = new Branch_2();
         br.dosmth();
+
         String[] xmlList = new String[6];
         xmlList[0] = "<tag1>";
         xmlList[1] = "text1";
@@ -21,6 +23,11 @@ public class Main {
         xmlList[3] = "<tag2>";
         xmlList[4] = "text2";
         xmlList[5] = "</tag2>";
+
+        String [] rle = new String[3];
+        rle[0]="buna";
+        rle[1]="cursuri online";
+        rle[2]="fis";
 
         Document xml = new XML(xmlList);
 
@@ -40,5 +47,9 @@ public class Main {
         pc2.adaugaProcesor(c3);
 
         System.out.println(pc2.proceseaza(documente));
+        Document fs1 = new RunLengthEncoding(rle);
+        System.out.println(fs1.analizeaza()[0]);
+        System.out.println(fs1.analizeaza()[1]);
+        System.out.println(fs1.analizeaza()[2]);
     }
 }
