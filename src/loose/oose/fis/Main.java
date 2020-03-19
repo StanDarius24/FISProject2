@@ -1,5 +1,6 @@
 package loose.oose.fis;
 
+import loose.oose.fis.documents.Branch_2;
 import loose.oose.fis.documents.Document;
 import loose.oose.fis.documents.XML;
 import loose.oose.fis.processors.Procesor;
@@ -11,7 +12,8 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-
+        Branch_2 br = new Branch_2();
+        br.dosmth();
         String[] xmlList = new String[6];
         xmlList[0] = "<tag1>";
         xmlList[1] = "text1";
