@@ -24,6 +24,6 @@ public class XML extends Document {
 
     @Override
     public String toString() {
-        return "XML " + super.toString();
+        return "XML_edited_Branch1 " + super.toString();
     }
 }
